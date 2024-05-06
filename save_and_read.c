@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include "base.h"
-// Сохранение в файл
+//Zakharow Timofey 123-mm
 void saveToFile(const char *filename) {
     FILE *fp;
     fp = fopen(filename, "w");
     if (fp == NULL) {
-        printf("Ошибка при открытии файла для записи.\n");
+        printf("Open file error \n");
         return;
     }
     for (int i = 0; i < objectCount; i++) {
@@ -16,12 +16,12 @@ void saveToFile(const char *filename) {
     fclose(fp);
 }
 
-// Чтение из файла
+
 void readFromFile(const char *filename) {
     FILE *fp;
     fp = fopen(filename, "r");
     if (fp == NULL) {
-        printf("Ошибка при открытии файла для чтения.\n");
+        printf("Open file error \n");
         return;
     }
     objects = (Object*)realloc(objects, (objectCount + 1) * sizeof(Object));
