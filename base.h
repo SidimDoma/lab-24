@@ -1,21 +1,18 @@
 #ifndef BASE_H_INCLUDED
 #define BASE_H_INCLUDED
 
-// Структура для хранения данных объекта
+// Struct to save objects
 typedef struct {
-    char text[50]; // Текстовое поле фиксированной вместимости
-    float floatValue; // Вещественное поле
-    int intValue; // Целочисленное поле
+    char text[50];
+    float floatValue;
+    int intValue;
 } Object;
 
-// Динамический массив структур
 extern Object* objects;
 extern int objectCount;
 
-// Меню
 void display_menu();
 
-// Функция для вывода таблицы на экран
 void print_table();
 
 #endif // BASE_H_INCLUDED
