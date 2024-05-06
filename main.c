@@ -10,64 +10,63 @@
 #include "sort.h"
 
 int main() {
-    setlocale(LC_CTYPE, "Russian");
     int choice, index, field, direction, chartType, file;
-    char filename[50]; // Максимальная длина имени файла
+    char filename[50];
     while (1) {
         display_menu();
-        printf("\nВведите свой выбор: ");
+        printf("\n Make a choice: ");
         scanf("%d", &choice);
         switch(choice) {
             case 1:
-                print_table(); // Вывод таблицы на экран
+                print_table();
                 break;
             case 2:
-                add_object(); // Добавление элемента
+                add_object();
                 break;
-            case 3: // Удаление элемента
-                printf("Введите индекс для удаления: ");
+            case 3:
+                printf("Imput index of object to be deleted: ");
                 scanf("%d", &index);
                 delete_object(index);
                 break;
-            case 4: // Сохранение в файл
-                printf("Выберите: 1-сохранить в заданный файл, 2-ввести имя файла\n");
+            case 4:
+                printf("Choose: 1 save object in file \n2 rename file\n");
                 scanf("%d", &file);
                 switch (file) {
                     case 1:
                         saveToFile("objects.txt");
                         break;
                     case 2:
-                        printf("Введите имя файла: ");
+                        printf("Imput file name: ");
                         scanf("%s", filename);
                         saveToFile(filename);
                         break;
                     default:
-                        printf("Неверный выбор\n");
+                        printf("Imput error\n");
                 }
                 break;
-            case 5: // Чтение из файла
-                printf("Выберите: 1-читать из заданного файла, 2-ввести имя файла\n");
+            case 5:
+                printf("Choose: 1 read from exact file \n2 rename file\n");
                 scanf("%d", &file);
                 switch (file){
                     case 1:
                         readFromFile("objects.txt");
                         break;
                     case 2:
-                        printf("Введите имя файла: ");
+                        printf("Imput file name: ");
                         scanf("%s", filename);
                         readFromFile(filename);
                         break;
                     default:
-                        printf("Неверный выбор\n");
+                        printf("Imput error\n");
                 }
                 break;
-            case 6: // Сортировка
-                printf("Выберите поле для сортировки (1 - текст, 2 - вещественное, 3 - целое): ");
+            case 6:
+                printf("Choose sorting (1 - text, 2 - double num, 3 - int num): ");
                 scanf("%d", &field);
-                printf("Выберите направление сортировки (1 - по возрастанию, 2 - по убыванию): ");
+                printf("Choose sorting order (1 - up, 2 - down): ");
                 scanf("%d", &direction);
                 if (direction>2){
-                    printf("Неверный выбор\n");
+                    printf("ГЌДєГўДєД‘Г­Е±Г© ГўЕ±ГЎГ®Д‘\n");
                     break;
                 }
                 switch (field) {
@@ -81,17 +80,17 @@ int main() {
                         sortObjectsByField(3, direction, compareInt);
                         break;
                     default:
-                        printf("Неверный выбор поля для сортировки\n");
+                        printf("Imput error\n");
                 }
                 break;
-            case 7: // Вывод диаграмм
-                printf("Выберите числовое поле для построения диаграммы (1 - вещественное, 2 - целое): ");
+            case 7:
+                printf("Choose diagram num (1 - double, 2 - int): ");
                 scanf("%d", &field);
                 if (field>2){
-                    printf("Неверный выбор\n");
+                    printf("ГЌДєГўДєД‘Г­Е±Г© ГўЕ±ГЎГ®Д‘\n");
                     break;
                 }
-                printf("Выберите тип диаграммы (1 - столбчатая, 2 - круговая): ");
+                printf("Choose diagram (1 - columnar, 2 - circular): ");
                 scanf("%d", &chartType);
                 switch (chartType) {
                     case 1:
@@ -101,13 +100,13 @@ int main() {
                         drawPieChart(field);
                         break;
                     default:
-                        printf("Неверный выбор типа диаграммы\n");
+                        printf("Imput error\n");
                 }
                 break;
             case 8:
                 exit(0);
             default:
-                printf("Неверный выбор\n");
+                printf("Imput error\n");
         }
     }
     return 0;
