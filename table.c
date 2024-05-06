@@ -2,25 +2,23 @@
 #include <stdlib.h>
 #include <string.h>
 #include "base.h"
-
-// Инициализируем
+//Zakharow Timofey 123-mm
 Object* objects = NULL;
 int objectCount = 0;
 
 void display_menu() {
-    printf("\n1. Показать базу данных\n");
-    printf("2. Добавить элемент\n");
-    printf("3. Удалить элемент по номеру\n");
-    printf("4. Сохранить в файл\n");
-    printf("5. Чтение из файла\n");
-    printf("6. Сортировка по полю\n");
-    printf("7. Отображение диаграмм\n");
-    printf("8. Выход\n");
+    printf("\n1. ГЏГ®ГЄГ Г§Г ГІГј ГЎГ Г§Гі Г¤Г Г­Г­Г»Гµ\n");
+    printf("2. Г„Г®ГЎГ ГўГЁГІГј ГЅГ«ГҐГ¬ГҐГ­ГІ\n");
+    printf("3. Г“Г¤Г Г«ГЁГІГј ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ® Г­Г®Г¬ГҐГ°Гі\n");
+    printf("4. Г‘Г®ГµГ°Г Г­ГЁГІГј Гў ГґГ Г©Г«\n");
+    printf("5. Г—ГІГҐГ­ГЁГҐ ГЁГ§ ГґГ Г©Г«Г \n");
+    printf("6. Г‘Г®Г°ГІГЁГ°Г®ГўГЄГ  ГЇГ® ГЇГ®Г«Гѕ\n");
+    printf("7. ГЋГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГҐ Г¤ГЁГ ГЈГ°Г Г¬Г¬\n");
+    printf("8. Г‚Г»ГµГ®Г¤\n");
 }
-// Функция для вывода таблицы на экран
+
 void print_table() {
-    // Вывод таблицы объектов
     for (int i = 0; i < objectCount; i++) {
-        printf("Номер элемента %d: Текстовое: %s, Вещественное: %f, Целочисленное: %d\n", i, objects[i].text, objects[i].floatValue, objects[i].intValue);
+        printf("ГЌГ®Г¬ГҐГ° ГЅГ«ГҐГ¬ГҐГ­ГІГ  %d: Г’ГҐГЄГ±ГІГ®ГўГ®ГҐ: %s, Г‚ГҐГ№ГҐГ±ГІГўГҐГ­Г­Г®ГҐ: %f, Г–ГҐГ«Г®Г·ГЁГ±Г«ГҐГ­Г­Г®ГҐ: %d\n", i, objects[i].text, objects[i].floatValue, objects[i].intValue);
     }
 }
