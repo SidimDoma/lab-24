@@ -8,7 +8,7 @@
 #include "graphic.h"
 #include "save_and_read.h"
 #include "sort.h"
-
+//Zakharow Timofey 123-mm
 int main() {
     int choice, index, field, direction, chartType, file;
     char filename[50];
