@@ -7,18 +7,18 @@ Object* objects = NULL;
 int objectCount = 0;
 
 void display_menu() {
-    printf("\n1. Ïîêàçàòü áàçó äàííûõ\n");
-    printf("2. Äîáàâèòü ýëåìåíò\n");
-    printf("3. Óäàëèòü ýëåìåíò ïî íîìåðó\n");
-    printf("4. Ñîõðàíèòü â ôàéë\n");
-    printf("5. ×òåíèå èç ôàéëà\n");
-    printf("6. Ñîðòèðîâêà ïî ïîëþ\n");
-    printf("7. Îòîáðàæåíèå äèàãðàìì\n");
-    printf("8. Âûõîä\n");
+    printf("\n1. Show database\n");
+    printf("2. Add object\n");
+    printf("3. Delete from file\n");
+    printf("4. Save to file\n");
+    printf("5. Read from file\n");
+    printf("6. Sort objects\n");
+    printf("7. Show diagram\n");
+    printf("8. Exit\n");
 }
 
 void print_table() {
     for (int i = 0; i < objectCount; i++) {
-        printf("Íîìåð ýëåìåíòà %d: Òåêñòîâîå: %s, Âåùåñòâåííîå: %f, Öåëî÷èñëåííîå: %d\n", i, objects[i].text, objects[i].floatValue, objects[i].intValue);
+        printf("Element ID %d: Text: %s, Double num: %f, Int num: %d\n", i, objects[i].text, objects[i].floatValue, objects[i].intValue);
     }
 }
